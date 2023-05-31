@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Proyecto Final</title>
+  <style>
+    body {
+      padding: 20px;
+      background-color: #f2f2f2; /* Fondo en color gris */
+    }
+    .container {
+      max-width: 600px;
+      background-color: #fff; /* Contenedor principal en color blanco */
+      padding: 20px;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 100px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra al contenedor */
+    }
+    h3 {
+      text-align: center;
+      font-size: 30px;
+      color: #333; /* Color del título */
+      margin-bottom: 30px;
+    }
+    .options {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .btn {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 style="font-family: Arial, sans-serif;">Proyecto Final: Cristiano Ronaldo</h3>
+    <p>Cristiano Ronaldo dos Santos Aveiro (Funchal, Madeira, 5 de febrero de 1985), conocido como Cristiano Ronaldo, es un futbolista portugués. Juega como extremo izquierdo o delantero y su equipo actual es el Al-Nassr F. C. de la Liga Profesional Saudí. Es internacional absoluto con la selección de Portugal, de la cual es capitán, máximo goleador histórico y jugador con más presencias.
+
+      Considerado con frecuencia el mejor y más completo futbolista, así como el mayor goleador del mundo, además de uno de los mejores de todos los tiempos; es uno de los futbolistas más laureados de la historia, habiendo ganado, entre otras distinciones, cinco veces el Balón de Oro, cinco premios de la FIFA al mejor jugador del mundo y cuatro Botas de Oro. En 2020, tuvo el honor de ser elegido el mejor Jugador del Siglo XXI en la gala de los Globe Soccer Awards, convirtiéndose en el primer futbolista europeo y el primer portugués en recibirlo, además de ser incluido en el Dream Team del Balón de Oro.
+      
+      Identificado habitualmente en los medios de comunicación con el numerónimo CR7, es, con 836 goles, el máximo goleador en la historia del fútbol profesional, y con 450, el máximo goleador histórico del Real Madrid Club de Fútbol, consiguiéndolo en las nueve temporadas que jugó en este club. Es además, según los portales expertos en estadísticas históricas de la RSSSF y la IFFHS, el tercer máximo goleador en los campeonatos de Primera División de Europa, con 498 goles —doce goles más a nivel mundial para un total de 511 goles—, siendo estos datos reconocidos por la UEFA y la FIFA.</p>
+    <img src="https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk3Njg1NjgxOTE5NjMyNjg1/cristiano-ronaldo-real-madrid.jpg" alt="Imagen Ejemplo" style="max-width: 100%; height: auto;">
+    <div class="options">
+      <button class="btn waves-effect waves-light" onclick="openYoutube()">Link Mejores Goles</button>
+      <a class="btn waves-effect waves-light" href="mailto:test@gmail.com">Link Correo</a>
+      <a class="btn waves-effect waves-light modal-trigger" href="#tableModal">Tabla Estadisticas</a>
+    </div>
+  </div>
+
+  <div id="youtubeModal" class="modal">
+    <div class="modal-content">
+      <h4>Mejores Goles de Cristiano Ronaldo en el Real Madrid</h4>
+      <p>Aquí puedes ver el video de YouTube con sus mejores goles en el Real Madrid:</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eFgSL_CHYwg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+
+  <div id="tableModal" class="modal">
+    <div class="modal-content">
+      <h4>Estadisticas primeras 2 temporadas en el Real Madrid</h4>
+      <table class="striped">
+        <tbody>
+          <tr>
+            <td>Temporada</td>
+            <td>Partido</td>
+            <td>Goles</td>
+          </tr>
+          <tr>
+            <td>2009 - 2010</td>
+            <td>29</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>2010 - 2011</td>
+            <td>34</td>
+            <td>40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
+    });
+
+    function openYoutube() {
+      var modal = document.querySelector('#youtubeModal');
+      var instance = M.Modal.getInstance(modal);
+      instance.open();
+    }
+  </script>
+</body>
+</html>
